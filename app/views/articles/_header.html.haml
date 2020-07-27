@@ -1,0 +1,20 @@
+.Header
+  .Top
+    .Top__Title
+      もち
+      =icon('fas','truck')
+      デリ
+    .Top__Btn
+      =link_to "#", class: "Top__Btn--Login" do
+        ログイン
+      =link_to "#", class: "Top__Btn--New" do
+        新規登録
+    
+  .Area
+    %ul.Area__Region
+      %li.Area__Region__Select
+        = link_to "#",class:"Area__Region__Kanto" do
+          関東▼
+      %li.Area__Region__Select
+        = link_to "#",class:"Area__Region__Kansai" do
+          関西▼

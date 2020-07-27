@@ -1,0 +1,58 @@
+.Header {
+  height: 100px;
+  
+  .Top {
+    height: 60px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7px;
+    &__Title {
+      color: white;
+      font-size: 30px;
+    }
+    &__Btn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 300px;
+      font-size: 20px;
+      margin-bottom: 5px;
+      &--Login {
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: white;
+      }
+      &--New {
+        margin: 0 20px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: white;
+      }
+      a {
+        text-decoration: none;
+        color: orange;
+      }
+    }
+
+  }
+  
+  .Area {
+    height: 40px;
+    background-color: wheat;
+    font-size: 20px;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    li {
+      margin-left: 20px;
+    }
+  }
+}
