@@ -1,0 +1,39 @@
+.Contents {
+  text-align: center;
+  color: mediumpurple;
+  font-size: 30px;
+  .Container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 20px;
+    &__Quote {
+      border-radius: 10px;
+      border: 2px solid gray;
+      width: 50%;
+    }
+    &__Menu {
+      border-radius: 10px;
+      border: 2px solid gray;
+      height: 100px;
+      width: 50%;
+      margin-top: 20px;
+    }
+    &__Rule {
+      border-radius: 10px;
+      border: 2px solid gray;
+      height: 100px;
+      width: 50%;
+      margin-top: 20px;
+    }
+    &__Btn {
+      border-radius: 10px;
+      border: 2px solid gray;
+      width: 50%;
+      margin-top: 20px;
+      background-color: mediumpurple;
+      color: white;
+    }
+  }
+}
