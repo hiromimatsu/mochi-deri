@@ -11,30 +11,25 @@
       color: white;
       font-size: 30px;
     }
-    &__Btn {
+    &__UserNav {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      width: 300px;
       font-size: 20px;
-      margin-bottom: 5px;
-      &--Login {
-        padding: 10px 20px;
-        border-radius: 10px;
-        background-color: white;
-      }
-      &--New {
-        margin: 0 20px;
-        padding: 10px 20px;
-        border-radius: 10px;
-        background-color: white;
+      margin: 5px 20px;
+      &__Btn {
+        &--Post {
+          border-radius: 20px;
+          background-color: white;
+          padding: 15px 20px;
+          margin-bottom: 5px;
+        }
       }
       a {
         text-decoration: none;
         color: orange;
       }
     }
-
   }
   
   .Area {
