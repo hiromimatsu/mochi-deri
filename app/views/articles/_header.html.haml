@@ -4,11 +4,15 @@
       もち
       =icon('fas','truck')
       デリ
-    .Top__Btn
-      =link_to "#", class: "Top__Btn--Login" do
-        ログイン
-      =link_to "#", class: "Top__Btn--New" do
-        新規登録
+    .Top__UserNav
+      - if user_signed_in?
+        .Top__UserNav__Btn
+          =link_to "ログアウト", destroy_user_session_path, class: "Top__UserNav__Btn--Post", method: :delete
+          =link_to "投稿する", new_article_path, class: "Top__UserNav__Btn--Post"
+      - else
+        .Top__UserNav__Btn
+          =link_to "ログイン", new_user_session_path, class: "Top__UserNav__Btn--Post"
+          =link_to "新規登録", new_user_registration_path, class: "Top__UserNav__Btn--Post"
     
   .Area
     %ul.Area__Region
