@@ -1,6 +1,6 @@
 .Contents
   新規投稿ページ
-  = form_with model: @article,local: true,class:"Container" do |f|
+  = form_with model: @articles,local: true,class:"Container" do |f|
     = f.text_field :quote, class: "Container__Quote", placeholder: "引用URL"
     = f.text_area :menu, class: "Container__Menu", placeholder: "メニュー"
     = f.text_area :rule, class: "Container__Rule", placeholder: "利用ルール"
