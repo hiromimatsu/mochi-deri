@@ -1,0 +1,8 @@
+.Contents
+  %p
+  = @name
+  = @articles.each do |article|
+    .Contents__Post
+    = article.quote
+    = article.menu
+    = article.rule

@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :move_to_index, expect: :index
   
   def index
-    @articles = Article.all
+    @articles = Article.includes(:user)
   end
 
   def new
@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:quote, :menu, :rule )
+    params.require(:article).permit(:quote, :menu, :rule ).merge(user_id: current_user.id)
   end
 
   def move_to_index
