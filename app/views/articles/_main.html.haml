@@ -1,3 +1,9 @@
 .Main
   .Article
-    記事一覧
+    = @articles.each do |article|
+      %p.Article_Quote
+      = article.quote
+      %p.Article_Menu
+      = article.menu
+      %p.Article_Rule
+      = article.rule
