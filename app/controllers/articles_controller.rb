@@ -6,17 +6,21 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @articles = Article.new
+    @article = Article.new
   end
 
   def create
     Article.create(article_params)
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
+
   private
 
   def article_params
-    params.require(:article).permit(:quote, :menu, :rule ).merge(user_id: current_user.id)
+    params.require(:article).permit(:menu, :rule, :image, :restaurant, :instagram).merge(user_id: current_user.id)
   end
 
   def move_to_index

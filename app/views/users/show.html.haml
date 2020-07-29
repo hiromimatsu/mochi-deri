@@ -1,8 +1,16 @@
 .Contents
   %p
   = @name
-  = @articles.each do |article|
+  - @articles.each do |article|
     .Contents__Post
-    = article.quote
-    = article.menu
-    = article.rule
+    = image_tag article.image.url, class: "Article__Image"
+    .Article__Contents
+    ●持ち帰りorデリバリー メニュー
+    %br
+    .Article__Contents__Show
+      = article.menu
+    %br
+    ●利用ルール
+    %br
+    .Article__Contents__Show
+      = article.rule
