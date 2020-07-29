@@ -1,3 +1,11 @@
 .Main {
   height: calc(100vh - 100px);
+  text-align: center;
+  .Article {
+    margin-top: 20px;
+    &__Image {
+      margin: 10px 15px;
+      
+    }
+  }
 }
