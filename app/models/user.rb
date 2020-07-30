@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :articles
   has_many :areas, through: :area_users
   has_many :area_users
+
+  validates :name, presence: true, uniqueness: true
+  
 end

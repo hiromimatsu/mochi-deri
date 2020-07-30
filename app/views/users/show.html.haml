@@ -1,16 +1,28 @@
 .Contents
   %p
-  = @name
+  .UserName
+    = @name
+    の投稿一覧
   - @articles.each do |article|
-    .Contents__Post
-    = image_tag article.image.url, class: "Article__Image"
-    .Article__Contents
-    ●持ち帰りorデリバリー メニュー
-    %br
-    .Article__Contents__Show
-      = article.menu
-    %br
-    ●利用ルール
-    %br
-    .Article__Contents__Show
-      = article.rule
+    .Article2
+      = image_tag article.image.url, class: "Article2__Image3"
+      .Article2__Contents
+        .Article2__Contents__Restaurant
+          = article.restaurant
+        %br
+        =icon('fas','shopping-bag')
+        テイクアウト メニュー
+        %br
+        .Article2__Contents__Show
+          = article.menu
+        %br
+        =icon('fas','info-circle')
+        利用ルール
+        %br
+        .Article2__Contents__Show
+          = article.rule
+        %br
+        .Article2__Contents__Logo
+        = link_to article.instagram, class:"Article2__Contents__Btn Article2__Contents__Btn--Instagram" do
+          =icon('fab','instagram', class: "Article2__Contents__Btn--Icon")
+          Instagram

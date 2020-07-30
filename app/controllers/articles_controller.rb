@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:menu, :rule, :image, :restaurant, :instagram).merge(user_id: current_user.id)
+    params.require(:article).permit(:menu, :rule, :image, :restaurant, :instagram, area_id: []).merge(user_id: current_user.id)
   end
 
   def move_to_index
